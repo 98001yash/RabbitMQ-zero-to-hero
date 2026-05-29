@@ -58,7 +58,7 @@ In the above architecture, the Order Service directly depends on multiple servic
 
 If the Notification Service becomes unavailable:
 
-![Tight Coupling Problem](../../diagrams/chapter%201/02-tight-coupling-problem.png)
+![Tight Coupling Problem](../../diagrams/chapter-01/02-tight-coupling-problem.png)
 
 ```text
 Order Service
@@ -197,7 +197,7 @@ Notification Service
 
 We introduce RabbitMQ:
 
-![RabbitMQ Solution](../../diagrams/chapter%201/03-rabbitmq-solution.png)
+![RabbitMQ Solution](../../diagrams/chapter-01/03-rabbitmq-solution.png)
 
 ```text
 Order Service
