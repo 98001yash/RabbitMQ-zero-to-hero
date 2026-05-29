@@ -40,9 +40,15 @@ Order Service
       +---- Analytics Service
 ```
 
-At first, everything works perfectly.
+## Traditional Synchronous Communication
 
-But what happens when the system grows?
+In a traditional microservices architecture, services often communicate directly with each other using REST APIs or gRPC.
+
+![Traditional Synchronous Communication](../../diagrams/01-synchronous-communication.png)
+
+At first, this architecture looks simple and easy to implement.
+
+However, as the number of services grows, multiple challenges begin to appear.
 
 ---
 
@@ -51,6 +57,8 @@ But what happens when the system grows?
 In the above architecture, the Order Service directly depends on multiple services.
 
 If the Notification Service becomes unavailable:
+
+![Tight Coupling Problem](../../diagrams/02-tight-coupling-problem.png)
 
 ```text
 Order Service
@@ -188,6 +196,8 @@ Notification Service
 ```
 
 We introduce RabbitMQ:
+
+![RabbitMQ Solution](../../diagrams/03-rabbitmq-solution.png)
 
 ```text
 Order Service
