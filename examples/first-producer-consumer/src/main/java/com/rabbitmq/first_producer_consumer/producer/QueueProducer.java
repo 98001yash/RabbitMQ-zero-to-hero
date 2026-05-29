@@ -1,6 +1,7 @@
 package com.rabbitmq.first_producer_consumer.producer;
 
 
+import com.rabbitmq.first_producer_consumer.config.ExchangeConfig;
 import com.rabbitmq.first_producer_consumer.config.QueueConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -13,8 +14,13 @@ public class QueueProducer {
     private final RabbitTemplate rabbitTemplate;
 
     public void sendOrdersMessage(String message){
+//        rabbitTemplate.convertAndSend(
+//                QueueConfig.ORDERS_QUEUE,
+//                message
+//        );
         rabbitTemplate.convertAndSend(
-                QueueConfig.ORDERS_QUEUE,
+                ExchangeConfig.ORDER_EXCHANGE,
+                ExchangeConfig.ORDER_ROUTING_KEY,
                 message
         );
         System.out.println(
