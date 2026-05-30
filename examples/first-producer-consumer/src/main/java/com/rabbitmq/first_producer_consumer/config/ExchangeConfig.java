@@ -12,6 +12,8 @@ public class ExchangeConfig {
     public static final String ORDER_EXCHANGE = "order.exchange";
     public static final String ORDER_ROUTING_KEY = "order.created";
 
+    public static final String ORDER_UPDATED_KEY = "order.updated";
+
     @Bean
     public DirectExchange orderExchange() {
         return new DirectExchange(
@@ -43,5 +45,17 @@ public class ExchangeConfig {
                 .bind(auditQueue)
                 .to(orderExchange)
                 .with(ORDER_ROUTING_KEY);
+    }
+
+    @Bean
+    public Binding updatesBinding(
+            Queue updatesQueue,
+            DirectExchange orderExchange
+    ) {
+
+        return BindingBuilder
+                .bind(updatesQueue)
+                .to(orderExchange)
+                .with(ORDER_UPDATED_KEY);
     }
 }
