@@ -2,6 +2,7 @@ package com.rabbitmq.first_producer_consumer.controller;
 
 import com.rabbitmq.first_producer_consumer.producer.DlqProducer;
 import com.rabbitmq.first_producer_consumer.producer.MessageProducer;
+import com.rabbitmq.first_producer_consumer.producer.PublisherConfirmProducer;
 import com.rabbitmq.first_producer_consumer.producer.QueueProducer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,8 @@ public class MessageController {
     private final MessageProducer messageProducer;
     private final QueueProducer producer;
     private final DlqProducer dlqProducer;
+    private final PublisherConfirmProducer publisherConfirmProducer;
+
 
     @PostMapping
     public String sendMessage(@RequestParam String message) {
@@ -130,5 +133,18 @@ public class MessageController {
         );
 
         return "DLQ Message Published";
+    }
+
+
+    @PostMapping("/publisher-confirm")
+    public String publishMessage(
+            @RequestParam String message
+    ) {
+
+        publisherConfirmProducer.publishMessage(
+                message
+        );
+
+        return "Publisher Confirm Message Sent";
     }
 }
