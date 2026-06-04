@@ -14,11 +14,11 @@
 	</parent>
 
 	<groupId>com.rabbitmq</groupId>
-	<artifactId>order-service</artifactId>
+	<artifactId>payment-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>order-service</name>
-	<description>Order Service for Ecommerce Event Driven System</description>
+	<name>payment-service</name>
+	<description>Payment Service for Ecommerce Event Driven System</description>
 
 	<properties>
 		<java.version>21</java.version>
@@ -65,12 +65,8 @@
 			<artifactId>spring-rabbit-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
 
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<plugins>

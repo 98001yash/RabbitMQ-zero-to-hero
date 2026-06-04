@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/examples/first-producer-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/projects/ecommerce-event-driven-system/inventory-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/projects/ecommerce-event-driven-system/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/projects/ecommerce-event-driven-system/payment-service/src/main/java" charset="UTF-8" />
   </component>
 </project>
