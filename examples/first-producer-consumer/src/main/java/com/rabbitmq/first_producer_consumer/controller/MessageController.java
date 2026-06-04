@@ -14,6 +14,7 @@ public class MessageController {
     private final DlqProducer dlqProducer;
     private final PublisherConfirmProducer publisherConfirmProducer;
     private final PersistenceProducer persistenceProducer;
+    private final RetryProducer retryProducer;
 
 
     @PostMapping
@@ -155,5 +156,18 @@ public class MessageController {
         persistenceProducer.publishMessage(message);
 
         return "Persistent Message Published";
+    }
+
+
+    @PostMapping("/retry")
+    public String sendRetryMessage(
+            @RequestParam String message
+    ) {
+
+        retryProducer.sendMessage(
+                message
+        );
+
+        return "Retry Message Published";
     }
 }
