@@ -71,28 +71,28 @@ The content is organized into chapters covering both fundamental and advanced co
 
 ## Learning Roadmap
 
-| Chapter | Topic                                   | Status |
-| ------- | --------------------------------------- | ------ |
-| 01      | Why Message Brokers Exist               | ✅      |
-| 02      | RabbitMQ Architecture                   | ✅      |
-| 03      | AMQP Protocol                           | ✅      |
-| 04      | Installing RabbitMQ                     | ✅      |
-| 05      | First Producer Consumer                 | ✅      |
-| 06      | Queues                                  | ✅      |
-| 07      | Exchanges                               | ✅      |
-| 08      | Bindings                                | ✅      |
-| 09      | Routing Keys                            | ✅      |
-| 10      | Direct Exchange                         | ✅      |
-| 11      | Fanout Exchange                         | ✅      |
-| 12      | Topic Exchange                          | ✅      |
-| 13      | Headers Exchange                        | ✅      |
-| 14      | Message Acknowledgements                | ✅      |
-| 15      | Auto ACK vs Manual ACK                  | ✅      |
-| 16      | Message Requeue & Redelivery            | ✅      |
-| 17      | Dead Letter Exchanges (DLX)             | ✅      |
-| 18      | Publisher Confirms                      | ✅      |
-| 19      | Message Persistence & Durable Messaging | ✅      |
-| 20      | Retry Mechanisms                        | ✅      |
+| Chapter | Topic |
+|----------|--------|
+| 01 | Why Message Brokers Exist |
+| 02 | RabbitMQ Architecture |
+| 03 | AMQP Protocol |
+| 04 | Installing RabbitMQ |
+| 05 | First Producer Consumer |
+| 06 | Queues |
+| 07 | Exchanges |
+| 08 | Bindings |
+| 09 | Routing Keys |
+| 10 | Direct Exchange |
+| 11 | Fanout Exchange |
+| 12 | Topic Exchange |
+| 13 | Headers Exchange |
+| 14 | Message Acknowledgements |
+| 15 | Auto ACK vs Manual ACK |
+| 16 | Message Requeue & Redelivery |
+| 17 | Dead Letter Exchanges (DLX) |
+| 18 | Publisher Confirms |
+| 19 | Message Persistence & Durable Messaging |
+| 20 | Retry Mechanisms |
 
 ---
 
