@@ -16,7 +16,6 @@ public class InventoryConsumer {
     ) {
 
         System.out.println();
-        System.out.println("================================");
         System.out.println("ORDER RECEIVED");
         System.out.println("Order Id : " + event.getOrderId());
         System.out.println("Product  : " + event.getProductName());
@@ -24,7 +23,6 @@ public class InventoryConsumer {
         System.out.println("Amount   : " + event.getAmount());
         System.out.println();
         System.out.println("Inventory Reserved Successfully");
-        System.out.println("================================");
         System.out.println();
     }
 }
