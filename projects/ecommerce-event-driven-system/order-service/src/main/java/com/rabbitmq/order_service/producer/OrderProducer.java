@@ -23,10 +23,8 @@ public class OrderProducer {
         );
 
         System.out.println();
-        System.out.println("================================");
         System.out.println("ORDER CREATED EVENT PUBLISHED");
         System.out.println(event);
-        System.out.println("================================");
         System.out.println();
     }
 }
